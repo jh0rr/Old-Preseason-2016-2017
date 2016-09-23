@@ -1,8 +1,8 @@
-# swivel-drive README
+# 2017-Robot README
 
-This is the repository for the swivel drive. Our files for the swivel drive will go here.
+This is the repository for the robot for January 2017. Our files for the robot will go here.
 
 Make sure you understand how to use GitHub (understand the concepts of repositories, commits, pull requests, and merging).
 Here is the guide resource website: https://guides.github.com
 
-Also, here is a video showing you what swivel/swerve drive looks like: https://youtu.be/rpTuB93RI-M
+Also, since we were working on swivel/swerve drive, here is what it looks like: https://youtu.be/rpTuB93RI-M
