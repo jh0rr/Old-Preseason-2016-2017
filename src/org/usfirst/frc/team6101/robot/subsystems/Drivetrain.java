@@ -9,7 +9,7 @@ import org.usfirst.frc.team6101.robot.commands.Calibration;
 /**
  *
  */
-public class DriveTrain extends Subsystem {
+public class Drivetrain extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
