@@ -15,7 +15,7 @@ public class Drivetrain extends Subsystem {
     // here. Call these from Commands.
 	public Encoder rEncoder = new Encoder(RobotMap.EncoderMap.RIGHT_ENCODER_FIRST_PORT, RobotMap.EncoderMap.RIGHT_ENCODER_SECOND_PORT, false, Encoder.EncodingType.k4X); 
 	public Encoder lEncoder = new Encoder(RobotMap.EncoderMap.LEFT_ENCODER_FIRST_PORT, RobotMap.EncoderMap.RIGHT_ENCODER_SECOND_PORT, false, Encoder.EncodingType.k4X);
-	public long rDrift, lDrift;
+	public double rDrift, lDrift;
     
 	public void initDefaultCommand() {
         // Set the default command for a subsystem here.
