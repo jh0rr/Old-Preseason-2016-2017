@@ -10,6 +10,12 @@ public class RobotMap {
     // following variables to use with your drivetrain subsystem.
     // public static int leftMotor = 1;
     // public static int rightMotor = 2;
+    public class EncoderMap{
+        public static int RIGHT_ENCODER_FIRST_PORT = 0;
+        public static int RIGHT_ENCODER_SECOND_PORT = 1;
+        public static int LEFT_ENCODER_FIRST_PORT = 2;
+        public static int LEFT_ENCODER_SECOND_PORT = 3;
+    }
     
 	public class EncoderMap{
 		public static final int RIGHT_ENCODER_FIRST_PORT = 0;
