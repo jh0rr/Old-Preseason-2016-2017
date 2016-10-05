@@ -40,7 +40,7 @@ public class Drivetrain extends Subsystem {
 	public int[] getRevolutions(){
 		int [] revCounts = new int[2];
                 // Way to calculate revolutions
-		int lRevs = 0;// number of revoutions in place of 0
+		int lRevs = 0;// number of revolutions in place of 0
 		int rRevs = 0; // number of revolutions in place of 0
 		revCounts[0] = lRevs;
 		revCounts[1] = rRevs;
