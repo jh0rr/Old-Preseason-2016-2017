@@ -4,7 +4,6 @@ import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 import org.usfirst.frc.team6101.robot.RobotMap;
-import org.usfirst.frc.team6101.robot.commands.Calibration;
 
 /**
  *
@@ -27,32 +26,24 @@ public class Drivetrain extends Subsystem {
 		lEncoder.reset();
 	}
 	
-	public void startEncoders(){
-		rEncoder.start();
-		lEncoder.start();
-	}
-	
-	public void stopEncoders(){
-		rEncoder.stop();
-		lEncoder.stop();
-	}
-	
-	public int[] getRevolutions(){
-		int [] revCounts = new int[2];
-                // Way to calculate revolutions
-		int lRevs = 0;// number of revolutions in place of 0
-		int rRevs = 0; // number of revolutions in place of 0
+	public double[] getRevolutions(){
+		double [] revCounts = new double[2];
+		lEncoder.setDistancePerPulse(2.0);
+		rEncoder.setDistancePerPulse(2.0);
+		
+		double lRevs = lEncoder.getDistance()/360;// number of revolutions in place of 0
+		double rRevs = rEncoder.getDistance()/360 ; // number of revolutions in place of 0
 		revCounts[0] = lRevs;
 		revCounts[1] = rRevs;
 		return (revCounts);
 	}
 	
-	public void slowRight(int lRevs, int rRevs){
+	public void slowRight(double lRevs, double rRevs){
 		rDrift = lRevs/rRevs;
 		lDrift = 1;
 	}
 	
-	public void slowLeft(int lRevs, int rRevs){
+	public void slowLeft(double lRevs, double rRevs){
 		rDrift = 1;
 		lDrift = rRevs/lRevs;
 	}
