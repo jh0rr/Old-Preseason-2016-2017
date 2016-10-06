@@ -26,13 +26,11 @@ public class Calibration extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-	Robot.driveTrain.resetEncoders();
-	Robot.driveTrain.startEncoders();
-	// Way to set a specific amount of time until encoders stop
-	Robot.driveTrain.stopEncoders();
-	int[] bothRevs = Robot.driveTrain.getRevolutions();    
+    	Robot.driveTrain.resetEncoders();
+    	// Way to set a specific amount of time until encoders stop
+    	double[] bothRevs = Robot.driveTrain.getRevolutions();    
 	
-	// bothRevs[0] = left; bothRevs[1] = right;
+    	// bothRevs[0] = left; bothRevs[1] = right;
     	if (bothRevs[1] > bothRevs[0]) {
 		Robot.driveTrain.slowRight(bothRevs[0], bothRevs[1]);
     	//if number of the right motor is more than the left motor the robot will turn right
