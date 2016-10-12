@@ -1,6 +1,7 @@
 package org.usfirst.frc.team6101.robot.subsystems;
 
-import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.*;
+import edu.wpi.first.wpilibj.interfaces.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 import org.usfirst.frc.team6101.robot.RobotMap;
@@ -16,6 +17,17 @@ public class Drivetrain extends Subsystem {
 	public Encoder lEncoder = new Encoder(RobotMap.EncoderMap.LEFT_ENCODER_FIRST_PORT, RobotMap.EncoderMap.RIGHT_ENCODER_SECOND_PORT, false, Encoder.EncodingType.k4X);
 	public double rDrift, lDrift;
     
+	// T = Top; B = Bottom; L = Left; R = Right
+	public VictorSP TL = new VictorSP(RobotMap.MotorMap.TOP_LEFT_MOTOR_POWER);
+	public VictorSP TR = new VictorSP(RobotMap.MotorMap.TOP_RIGHT_MOTOR_POWER);
+	public VictorSP BL = new VictorSP(RobotMap.MotorMap.BOTTOM_LEFT_MOTOR_POWER);
+	public VictorSP BR = new VictorSP(RobotMap.MotorMap.BOTTOM_RIGHT_MOTOR_POWER);
+	
+	public AnalogGyro TLGyro = new AnalogGyro(RobotMap.GyroMap.TOP_LEFT_GYRO);
+	public AnalogGyro TRGyro = new AnalogGyro(RobotMap.GyroMap.TOP_RIGHT_GYRO);
+	public AnalogGyro BLGyro = new AnalogGyro(RobotMap.GyroMap.BOTTOM_LEFT_GYRO);
+	public AnalogGyro BRGyro = new AnalogGyro(RobotMap.GyroMap.BOTTOM_RIGHT_GYRO);
+	
 	public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
@@ -51,5 +63,12 @@ public class Drivetrain extends Subsystem {
 	public void motorSame(){
 		rDrift = 1;
 		lDrift = 1;
+	}
+	
+	public boolean checkParallel(){
+		boolean isParallel = false;
+		// Check if wheels are parallel
+		
+		return isParallel;
 	}
 }
