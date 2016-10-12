@@ -16,7 +16,18 @@ public class RobotMap {
         public static final int LEFT_ENCODER_FIRST_PORT = 2;
         public static final int LEFT_ENCODER_SECOND_PORT = 3;
     }
-
+    public class MotorMap{
+    	public static final int TOP_LEFT_MOTOR_POWER = 0;
+    	public static final int TOP_RIGHT_MOTOR_POWER = 1;
+    	public static final int BOTTOM_LEFT_MOTOR_POWER = 2;
+    	public static final int BOTTOM_RIGHT_MOTOR_POWER = 3;
+    }
+    public class GyroMap{
+    	public static final int TOP_LEFT_GYRO = 0;
+    	public static final int TOP_RIGHT_GYRO = 1;
+    	public static final int BOTTOM_LEFT_GYRO = 2;
+    	public static final int BOTTOM_RIGHT_GYRO = 3;
+    }
 
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:
